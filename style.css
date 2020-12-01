@@ -1,0 +1,124 @@
+/* my reset css */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* my styling starts here */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: gray;
+}
+
+section {
+    width: 750px;
+    margin: 50px auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+/* General Table Styling */
+table {
+    width: 220px;
+    height: 400px;
+    border-collapse: collapse;
+    box-shadow: 0 0 5px gray;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 1s;
+}
+
+td {
+    padding: 10px;
+}
+
+/* Headers */
+table thead {
+    background: cadetblue;
+    color: white;
+}
+
+thead h3 {
+    font-weight: normal;
+    padding-top: 15px;
+}
+thead p {
+    font-size: 12px;
+    color: gainsboro;
+    padding: 10px 0;
+}
+
+/* List's part */
+table tr:first-child td {
+    border-bottom: 1px solid gainsboro;
+}
+
+ul {
+    text-align: left;
+    list-style-type: none;
+    line-height: 1.6rem;
+    font-size: 12px;
+}
+section table:last-child ul {
+    line-height: 1.3rem;
+}
+ul li::before {
+    content: "\2714";
+    margin-right: 5px;
+    color: cadetblue;
+}
+
+/* Prices */
+.price {
+    color: black;
+    font-size: 34px;
+    padding-top: 10px;
+}
+.price +div {
+    font-size: 10px;
+}
+
+/* Links "Purchase */
+table tr:nth-of-type(3) td {
+    padding: 0;
+    height: 90px;
+}
+.link {
+    padding: 7px;
+    width: 60%;
+    margin: 0 auto 5px;
+    border: 2px solid cadetblue;
+    border-radius: 7px;
+    transition: 0.5s;
+}
+.link a {
+    color: cadetblue;
+    text-transform: uppercase;
+}
+.link +div {
+    font-size: 10px;
+    padding: 10px 0 15px;
+}
+.link:hover {
+    background: cadetblue;
+}
+.link:hover a {
+    color: white;
+}
+
+/* hoover effect on any "Plan"*/
+table:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px gray;
+}
+table:hover thead::before {
+    content: "Recommended";
+    line-height: 35px;
+    background: teal;
+    display: block;
+    font-size: 14px;
+}
